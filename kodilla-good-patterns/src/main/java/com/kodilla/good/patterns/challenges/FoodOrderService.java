@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges;
 
-public class FoodOrderService implements OrderService{
+public class FoodOrderService implements ProdOrderService {
 
     public boolean order(User user, Product product) {
 

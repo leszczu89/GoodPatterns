@@ -2,11 +2,11 @@ package com.kodilla.good.patterns.challenges;
 
 public class ProductOrderProcessor {
     private final InformationService informationService;
-    private final OrderService orderService;
+    private final ProdOrderService orderService;
     private final OrderRepository orderRepository;
 
     public ProductOrderProcessor(final InformationService informationService,
-                                 final OrderService orderService,
+                                 final ProdOrderService orderService,
                                  final OrderRepository orderRepository) {
         this.informationService = informationService;
         this.orderService = orderService;

@@ -1,6 +1,6 @@
 package com.kodilla.good.patterns.challenges;
 
-public interface OrderService {
+public interface ProdOrderService {
 
     public boolean order(User user, Product product);
 }
