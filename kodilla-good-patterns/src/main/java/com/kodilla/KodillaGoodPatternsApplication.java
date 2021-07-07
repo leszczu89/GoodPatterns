@@ -1,8 +1,6 @@
 package com.kodilla;
 
-import com.kodilla.good.patterns.challenges.MovieStore;
-import com.kodilla.good.patterns.challenges.TitleDisplay;
-import org.springframework.boot.SpringApplication;
+import com.kodilla.good.patterns.challenges.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
@@ -18,6 +16,14 @@ public class KodillaGoodPatternsApplication {
 
         TitleDisplay titleDisplay = new TitleDisplay();
         titleDisplay.displayTitles(moviesMap);
+
+        //Product Order Service:
+
+        OrderRequestRetriever orderRequestRetriever = new OrderRequestRetriever();
+        OrderRequest orderRequest = orderRequestRetriever.retrieve();
+
+        ProductOrderProcessor productOrderProcessor = new ProductOrderProcessor(new MailService(), new FoodOrderService(), new ProductOrderRepository());
+        productOrderProcessor.process(orderRequest);
     }
 
 }
