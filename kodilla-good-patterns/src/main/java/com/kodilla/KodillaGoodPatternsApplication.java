@@ -1,6 +1,8 @@
 package com.kodilla;
 
 import com.kodilla.good.patterns.challenges.*;
+import com.kodilla.good.patterns.flights.Flight;
+import com.kodilla.good.patterns.flights.FlightsSearchEngine;
 import com.kodilla.good.patterns.food2door.ExtraFoodShopProcessor;
 import com.kodilla.good.patterns.food2door.OrderRetrieval;
 import com.kodilla.good.patterns.food2door.OrderService;
@@ -35,6 +37,11 @@ public class KodillaGoodPatternsApplication {
 
         OrderService orderService = new OrderService(new ExtraFoodShopProcessor());
         orderService.orderProduct(new OrderRetrieval());
+
+        //Flights search engine
+
+        FlightsSearchEngine flightsSearchEngine = new FlightsSearchEngine();
+        flightsSearchEngine.searchForFlights(new Flight("Cracow", "Warsaw"));
     }
 
 }
